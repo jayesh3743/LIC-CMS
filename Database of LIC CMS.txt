@@ -1,0 +1,81 @@
+Role
+======
+RoleId (PK)   
+Role Name (Admin,User)
+
+
+UserMaster
+===========
+UserId (PK)
+UserName
+Password
+CreatedOn
+CreatedBy
+RoleId (FK)
+
+
+UserDetailMaster
+================
+UserDetailId (PK)
+First Name
+Middle Name
+Last Name
+Mobile
+Email
+Address
+CityId (FK)
+Pin Code
+UserId  (FK)
+AgentCode 
+
+
+Mode
+=====
+ModeId (PK)
+Mode Name (singal,monthly,half quertly,quertly,yearly)
+
+
+Term
+======
+TermId (PK)
+Term Name (How many year of pay premium to LIC.)
+
+
+Plan
+=======
+PlanId (PK)
+Plan Code 
+Plan Name
+
+
+ClientDetailMaster
+===================
+ClientDetailId (PK)
+First Name
+Last Name
+Middle Name
+Date of Birth
+AGE (calculate to date of birth.)
+Mobile
+Email
+Date Of Start
+wait of client
+height of client
+Identity sign of Body 
+UserId (FK)
+
+
+
+ClientAssuranceDetail
+=====================
+ClientAssuranceDetailId  (PK)
+Premium
+Policy Number
+Sum of Assurance
+PlanId 					 (FK)
+TermId 					 (FK)
+ModeId 					 (FK)
+Date of Maturity (date of pay all payment (Bonus + Sum Assurance))
+Next Premium Date
+Nominee
+ClientDetailId           (FK)
